@@ -1,38 +1,31 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    int num, digit, sum = 0, temp, r;
-    printf("Enter any number: \n");
+    int num, n = 0, sum = 0, temp, r;
+    printf("Enter the number to check whether it is Armstrong: \n");
     scanf("%d", &num);
     temp = num;
-    digit = count(num);
-    printf("%d", digit);
     while (num != 0){
-        r = r % 10;
-        num = num / 10;
-        sum = sum + power(r, digit);
+        r = num % 10;
+        num /= 10;
+        n++;
     }
-    printf("%d", sum);
-    if (temp == sum)
-        printf("Number is Armstrong");
+    num = temp;
+    while (num != 0){
+        r = num % 10;
+        sum += power(r, n);
+        num /= 10;
+    }
+    if (sum == temp)
+        printf("Armstrong");
     else
         printf("Not Armstrong");
     return 0;
 }
-int power(int num, int expo){
-    int ans = 1;
-    for (int i = 1; i <= expo; i++){
-        ans =  ans * num; 
+int power(int base, int exponent){
+    int num = 1;
+    for (int i = 1; i <= exponent; i++){
+        num = num * base;
     }
-    return ans;
-}
-int count(int a){
-    int r, c = 0;
-    while (a != 0){
-        r = a % 10;
-        a = a / 10;
-        c++;
-    }
-    return c;
+    return num;
 }
