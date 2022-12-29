@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 int main() {
     int arr[7], i, j, copy[7];
     printf("Enter 7 elements of array: \n");
