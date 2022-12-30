@@ -1,6 +1,4 @@
 #include <stdio.h>
-int min(int, int);
-int max(int, int);
 int main() {
     int arr[20], size, copy[20], i;
     printf("Enter size of the array: ");
