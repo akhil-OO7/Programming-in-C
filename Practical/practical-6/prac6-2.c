@@ -8,15 +8,27 @@ int main() {
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n; j ++)
             scanf("%d", &a[i][j]);
-            
     printf("Enter elements of B matrix (%d x %d): ", n, n);
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n; j ++)
             scanf("%d", &b[i][j]);
-    
+    printf("A matrix: \n");
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            sum[i][j] += a[i][j] + b[i][j];
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("B Matrix: \n");
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            printf("%d ", b[i][j]);
+        }
+        printf("\n");
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            sum[i][j] = a[i][j] + b[i][j];
         }
     }
     printf("Sum of A + B =  \n");
@@ -26,7 +38,6 @@ int main() {
         }
         printf("\n");
     }
-    
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             mul[i][j] = 0;
