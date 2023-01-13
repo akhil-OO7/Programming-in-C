@@ -1,12 +1,10 @@
 #include<stdio.h>
 int strLen(char []);
-char *strCat(char *, const char *);
 int main(){
     char a[100];
     printf("Enter any string: ");
     gets(a);
-    printf("The length of the string is: %d", strLen(a));
-    strCat("Hello", "World");
+    printf("The length of the string is: %d", strLen(a))
 }
 int strLen(char a[]){
     int i;
