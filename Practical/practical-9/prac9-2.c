@@ -2,7 +2,7 @@
 void swap(int *, int *);
 int main() {
     int a, b;
-    printf("Enter two variables to swap their values: ");
+    printf("Enter two numbers to swap their values: ");
     scanf("%d%d", &a, &b);
     printf("Before swapping the values are a: %d, b: %d", a, b);
     swap(&a, &b);
