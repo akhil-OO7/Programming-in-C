@@ -9,6 +9,7 @@ int main(){
     printf("%d\n", a);
     f3();
     printf("%d", a);
+    return 0;
 }
 void f1(){
     a = a + 10;
