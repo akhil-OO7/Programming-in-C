@@ -1,5 +1,5 @@
 #include<stdio.h>
-void strCat(char *, char *);
+void strCpy(char *, char *);
 int main(){
     char s1[100], s2[100];
     printf("Enter any string: ");
